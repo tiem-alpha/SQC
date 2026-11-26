@@ -1,0 +1,280 @@
+{
+  "alarms": [],
+  "covered_lines": [
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      29
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      33
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      34
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      36
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      37
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      38
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      39
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      40
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      41
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      43
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      44
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      45
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      48
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      49
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      50
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      51
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      55
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      57
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      58
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      59
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      60
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      61
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      62
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      63
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      66
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      68
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      69
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      70
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      71
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      74
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c",
+      75
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      15
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      18
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      19
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      20
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      21
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      25
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      26
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      28
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      29
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      30
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      34
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      38
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      41
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      43
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      44
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      47
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      48
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      49
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      50
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      52
+    ]
+  ],
+  "dead_after_ub_lines": [],
+  "elapsed_ms": 9.3782650000000007,
+  "equivalence_cache_hits": 1,
+  "equivalence_queries": 3,
+  "error_message": "",
+  "input_specs": [
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 41,
+      "range_desc": "{&stack_102514830652400, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      "function_name": "rtos_queue_recv",
+      "kind": "sqc_make_unknown",
+      "line": 18,
+      "range_desc": "unknown bytes ([64] B, may lack '\\0')",
+      "target": "stack_102514829176240"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      "function_name": "rtos_queue_recv",
+      "kind": "sqc_interval",
+      "line": 19,
+      "range_desc": "[-1, 64]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      "function_name": "rtos_get_tick_ms",
+      "kind": "sqc_interval",
+      "line": 34,
+      "range_desc": "[0, 60000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_find_variable",
+      "line": 47,
+      "range_desc": "white-box state target 'g_rx_packets'",
+      "target": "g_rx_packets"
+    }
+  ],
+  "instructions_analyzed": 238,
+  "remainder_slices": 0,
+  "smt_false_positives_eliminated": 0,
+  "smt_queries": 0,
+  "subcond_masks": {
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:29:22": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:29:42": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:29:9": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:37:9": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:38:13": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:38:23": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:50:21": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:50:9": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:60:9": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/rtos_dma_app.c:68:13": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c:15:21": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c:15:9": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c:25:21": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c:25:9": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/04_rtos_uart_dma_mock/sqc_driver.c:48:9": 1
+  },
+  "success": true,
+  "unit_id": 1,
+  "unit_name": "04_rtos_uart_dma_mock"
+}

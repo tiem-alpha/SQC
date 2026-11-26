@@ -1,0 +1,82 @@
+{
+  "alarms": [],
+  "covered_lines": [
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      27
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      29
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      30
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      31
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      33
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      38
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      40
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      41
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      45
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      49
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      53
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      55
+    ]
+  ],
+  "dead_after_ub_lines": [],
+  "elapsed_ms": 3.1419290000000002,
+  "equivalence_cache_hits": 0,
+  "equivalence_queries": 2,
+  "error_message": "",
+  "input_specs": [
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 53,
+      "range_desc": "[0, 5]",
+      "target": "interval_val"
+    }
+  ],
+  "instructions_analyzed": 98,
+  "remainder_slices": 0,
+  "smt_false_positives_eliminated": 0,
+  "smt_queries": 0,
+  "subcond_masks": {
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c:27:21": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c:27:9": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c:38:22": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c:38:5": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/03_subcondition_coverage/subcond_cov.c:45:9": 2
+  },
+  "success": true,
+  "unit_id": 1,
+  "unit_name": "03_subcondition_coverage"
+}

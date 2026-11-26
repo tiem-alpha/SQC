@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQC Static Analysis Report — 01_basic_hazards</title>
+<style>
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+  --green: #16a34a;
+  --green-bg: #dcfce7;
+  --yellow: #ca8a04;
+  --yellow-bg: #fef9c3;
+  --orange: #ea580c;
+  --orange-bg: #ffedd5;
+  --red: #dc2626;
+  --red-bg: #ffe4e6;
+  --purple: #9333ea;
+  --purple-bg: #f3e8ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.5;
+}
+header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  padding: 20px 28px;
+}
+.header-top {
+  display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px;
+}
+.header-top h1 { margin: 0; font-size: 22px; font-weight: 700; color: #0f172a; }
+.header-top h1 span { color: var(--accent); }
+.meta { color: var(--muted); font-size: 13px; }
+.kpi-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px; margin-top: 18px;
+}
+.kpi {
+  background: #ffffff; border: 1px solid var(--border); border-radius: 10px;
+  padding: 14px 16px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.kpi-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+.kpi-value { font-size: 24px; font-weight: 700; margin-top: 4px; color: #0f172a; }
+.kpi-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.progress-bar {
+  width: 100%; height: 8px; background: #e2e8f0; border-radius: 999px; overflow: hidden; margin-top: 8px;
+}
+.progress-fill { height: 100%; background: linear-gradient(90deg, #16a34a, #0284c7); border-radius: 999px; }
+.progress-fill.warn { background: linear-gradient(90deg, #ca8a04, #ea580c); }
+.progress-fill.low { background: linear-gradient(90deg, #dc2626, #ea580c); }
+
+.tabs {
+  display: flex; gap: 6px; padding: 12px 28px 0; background: #ffffff;
+  border-bottom: 1px solid var(--border-strong);
+}
+.tab-btn {
+  background: transparent; border: none; color: var(--muted); padding: 10px 18px;
+  font-size: 14px; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); background: #f8fafc; border-radius: 6px 6px 0 0; }
+.badge-count {
+  display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11px;
+  background: var(--surface-2); color: var(--text); margin-left: 6px; border: 1px solid var(--border);
+}
+.badge-count.danger { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+
+main { padding: 22px 28px 44px; max-width: 1520px; margin: 0 auto; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.page-title {
+  margin: 0 0 14px 0; font-size: 18px; font-weight: 700; color: #0f172a;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+}
+
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; align-items: center;
+}
+input[type="text"], select {
+  background: #ffffff; border: 1px solid var(--border-strong); color: var(--text);
+  padding: 7px 12px; border-radius: 6px; font-size: 13px;
+}
+input[type="text"] { min-width: 260px; }
+
+table {
+  width: 100%; border-collapse: collapse; background: #ffffff;
+  border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: 13px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { background: var(--surface-2); color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+tr.clickable:hover { background: #f0f9ff; cursor: pointer; }
+
+.pill {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600;
+}
+.pill-definite { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+.pill-potential { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+.pill-ok { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.pill-fail { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+.alarm-detail-row { background: #f8fafc; }
+.alarm-detail-box { padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 900px) { .alarm-detail-box { grid-template-columns: 1fr; } }
+.code-snippet {
+  background: #ffffff; border: 1px solid var(--border-strong); border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px; overflow-x: auto; padding: 8px 0; color: #0f172a;
+}
+.snip-line { display: flex; padding: 1px 10px; white-space: pre; }
+.snip-line.hl { background: var(--orange-bg); border-left: 3px solid var(--orange); font-weight: 600; }
+.snip-ln { width: 44px; color: var(--muted); user-select: none; text-align: right; padding-right: 12px; }
+
+.callstack-box {
+  margin-top: 8px; padding: 10px 12px; background: #ffffff; border: 1px solid var(--border);
+  border-radius: 6px; font-size: 12.5px;
+}
+.callstack-step {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  padding: 2px 0; color: #0f172a;
+}
+
+.btn {
+  background: var(--accent); color: #ffffff; border: none; padding: 7px 14px;
+  border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer;
+}
+.btn:hover { filter: brightness(0.95); }
+.btn-ghost {
+  background: #ffffff; color: var(--text); border: 1px solid var(--border-strong);
+}
+
+/* Page 2: Coverage Table */
+.fn-row td { background: #fafbfd; padding-left: 30px; }
+.mini-bar { display: inline-flex; align-items: center; gap: 8px; min-width: 150px; }
+.mini-bar-track { flex: 1; height: 7px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+.mini-bar-fill { height: 100%; background: var(--green); }
+.mini-bar-fill.warn { background: var(--yellow); }
+.mini-bar-fill.low { background: var(--red); }
+
+/* Page 3: Source Viewer */
+.viewer-card {
+  background: #ffffff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+.viewer-header {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+  padding: 12px 16px; background: var(--surface-2); border-bottom: 1px solid var(--border);
+}
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); }
+.legend-item { display: inline-flex; align-items: center; gap: 5px; }
+.swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; border: 1px solid rgba(15,23,42,0.15); }
+
+.source-container {
+  max-height: 760px; overflow: auto; background: #ffffff; color: #0f172a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px;
+}
+.src-line {
+  display: flex; align-items: baseline; padding: 1px 12px 1px 0; border-left: 4px solid transparent;
+  min-height: 22px;
+}
+.src-line.st-0 { background: #ffffff; border-left-color: transparent; }
+.src-line.st-1 { background: var(--red-bg); border-left-color: var(--red); }
+.src-line.st-2 { background: var(--green-bg); border-left-color: var(--green); }
+.src-line.st-3 { background: var(--yellow-bg); border-left-color: var(--yellow); }
+.src-line.st-4 { background: var(--orange-bg); border-left-color: var(--orange); }
+.src-line.st-5 { background: var(--purple-bg); border-left-color: var(--purple); }
+.src-line.flash { outline: 2px solid var(--accent); }
+
+.ln-num {
+  width: 56px; flex-shrink: 0; text-align: right; padding-right: 12px;
+  color: #64748b; user-select: none; border-right: 1px solid #e2e8f0; margin-right: 12px;
+}
+.ln-code { white-space: pre; flex: 1; color: #0f172a; }
+.sc-badges { display: inline-flex; flex-wrap: wrap; gap: 6px; margin-left: 14px; }
+.sc-badge {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 11px; padding: 1px 7px; border-radius: 4px; font-weight: 600;
+}
+.sc-badge.partial { background: #fef08a; color: #854d0e; border: 1px solid #eab308; }
+.sc-badge.full { background: #bbf7d0; color: #166534; border: 1px solid #22c55e; }
+
+.inline-alarm-card {
+  margin: 4px 14px 8px 68px; padding: 10px 14px; border-radius: 6px;
+  background: #fff7ed; border: 1px solid #fb923c; color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12.5px;
+}
+.inline-alarm-card strong { color: #c2410c; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><span>SQC</span> Static Analysis Report &mdash; <span id="hdr-project"></span></h1>
+    <div class="meta" id="hdr-timestamp"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="overview">1. Overview</button>
+  <button class="tab-btn" data-tab="alarms">2. Alarms &amp; Callstack <span class="badge-count danger" id="tab-alarms-cnt">0</span></button>
+  <button class="tab-btn" data-tab="coverage">3. Coverage (Files &amp; Functions) <span class="badge-count" id="tab-files-cnt">0</span></button>
+  <button class="tab-btn" data-tab="source">4. Source Viewer (Line-by-Line)</button>
+  <button class="tab-btn" data-tab="analyses">5. Analyses &amp; Metrics <span class="badge-count" id="tab-units-cnt">0</span></button>
+</nav>
+
+<main>
+  <!-- PAGE 1: OVERVIEW -->
+  <section id="panel-overview" class="tab-panel active">
+    <h2 class="page-title">Project Overview &amp; Executive Summary</h2>
+    <div class="kpi-grid" id="kpi-grid"></div>
+    <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;">
+      <button class="btn" onclick="switchTab('alarms')">Inspect Alarms &amp; Callstack &rarr;</button>
+      <button class="btn btn-ghost" onclick="switchTab('coverage')">View File &amp; Function Coverage &rarr;</button>
+      <button class="btn btn-ghost" onclick="switchTab('source')">Open Line-by-Line Source Viewer &rarr;</button>
+      <button class="btn btn-ghost" onclick="switchTab('analyses')">View Engine Metrics &rarr;</button>
+    </div>
+  </section>
+
+  <!-- PAGE 2: ALARMS & CALLSTACK -->
+  <section id="panel-alarms" class="tab-panel">
+    <h2 class="page-title">Consolidated Alarms &amp; Callstack Details</h2>
+    <div class="toolbar">
+      <input type="text" id="alarm-search" placeholder="Search function, file, predicate, witness...">
+      <select id="alarm-kind-filter"><option value="">All Kinds</option></select>
+      <select id="alarm-cert-filter">
+        <option value="">All Certainties</option>
+        <option value="Definite Bug">Definite Bug</option>
+        <option value="Potential UB">Potential UB</option>
+      </select>
+      <select id="alarm-unit-filter"><option value="">All Analyses</option></select>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Kind</th><th>Certainty</th><th>Function</th><th>File:Line</th>
+          <th>Predicate</th><th>Concrete Witness</th><th>Callstack</th><th>Analysis</th>
+        </tr>
+      </thead>
+      <tbody id="alarms-tbody"></tbody>
+    </table>
+  </section>
+
+  <!-- PAGE 2: COVERAGE (FILES & FUNCTIONS) -->
+  <section id="panel-coverage" class="tab-panel">
+    <h2 class="page-title">
+      <span>File &amp; Function Line-of-Code (LoC) Coverage</span>
+      <span class="muted" style="font-size:13px;font-weight:400;">Click any File or Function to inspect line-by-line coverage in Source Viewer</span>
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>File / Function</th><th>Lines</th><th>Executable</th><th>Covered</th>
+          <th>LoC Coverage %</th><th>Sub-Condition %</th><th>Alarms</th>
+        </tr>
+      </thead>
+      <tbody id="cov-tbody"></tbody>
+    </table>
+  </section>
+
+  <!-- PAGE 3: SOURCE VIEWER (LINE-BY-LINE) -->
+  <section id="panel-source" class="tab-panel">
+    <div class="toolbar">
+      <label class="muted" style="font-size:13px;font-weight:600;">File:</label>
+      <select id="viewer-file-select"></select>
+      <label class="muted" style="font-size:13px;font-weight:600;">Jump to Function:</label>
+      <select id="viewer-func-select"></select>
+      <button class="btn btn-ghost" onclick="switchTab('coverage')">&larr; Back to Coverage Table</button>
+    </div>
+    <div class="viewer-card" id="source-viewer">
+      <div class="viewer-header">
+        <div>
+          <strong id="viewer-title" class="mono"></strong>
+          <span id="viewer-stats" class="muted" style="margin-left:10px;font-size:12px;"></span>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background:var(--green-bg);border-color:var(--green)"></span>Covered &amp; Safe</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--yellow-bg);border-color:var(--yellow)"></span>Partial Sub-Condition</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--orange-bg);border-color:var(--orange)"></span>UB / Hazard Alarm</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--purple-bg);border-color:var(--purple)"></span>Dead After UB</span>
+          <span class="legend-item"><span class="swatch" style="background:var(--red-bg);border-color:var(--red)"></span>Uncovered</span>
+          <span class="legend-item"><span class="swatch" style="background:#ffffff"></span>Non-Executable</span>
+        </div>
+      </div>
+      <div class="source-container" id="source-container"></div>
+    </div>
+  </section>
+
+  <!-- PAGE 4: ANALYSES & METRICS -->
+  <section id="panel-analyses" class="tab-panel">
+    <h2 class="page-title">Individual Analyses &amp; Engine Performance Metrics</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Analysis Unit</th><th>Status</th><th>Runtime (ms)</th>
+          <th>Instructions</th><th>Equiv Queries</th><th>Cache Hits</th>
+          <th>Remainder Slices</th><th>Z3 Queries</th><th>FP Eliminated</th><th>Alarms</th>
+        </tr>
+      </thead>
+      <tbody id="analyses-tbody"></tbody>
+    </table>
+  </section>
+</main>
+
+<script id="sqc-data" type="application/json">{"alarms":[{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":13,"concrete_witness":"ptr = NULL","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":0,"kind_str":"Null Pointer Dereference","line":22,"message":"Null pointer dereference on read of 'ptr'","occurrences":1,"predicate":"ptr == NULL","rule_id":"SQC-NullPointerDeref"},{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":15,"concrete_witness":"arith_result > INT32_MAX (2147483657)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":3,"kind_str":"Signed Integer Overflow","line":23,"message":"Signed integer overflow in arithmetic operation (arith_result > INT32_MAX (2147483657))","occurrences":1,"predicate":"result < INT32_MIN || result > INT32_MAX","rule_id":"SQC-SignedIntegerOverflow"},{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":22,"concrete_witness":"arith_result < INT32_MIN (-2147483663)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":3,"kind_str":"Signed Integer Overflow","line":35,"message":"Signed integer overflow in arithmetic operation (arith_result < INT32_MIN (-2147483663))","occurrences":1,"predicate":"result < INT32_MIN || result > INT32_MAX","rule_id":"SQC-SignedIntegerOverflow"},{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":17,"concrete_witness":"in_L46_55088 = 15 (divisor = 0)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":2,"kind_str":"Division By Zero","line":35,"message":"Division/modulo by zero (in_L46_55088 = 15 (divisor = 0))","occurrences":1,"predicate":"divisor == 0","rule_id":"SQC-DivisionByZero"},{"analysis_name":"01_basic_hazards","callstack":["sqc_main","array_access"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":12,"concrete_witness":"ptr_offset = 32","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"array_access","kind":1,"kind_str":"Out-of-Bounds Memory Access","line":42,"message":"Out-of-bounds read on 'stack_96614536691424' (ptr_offset = 32)","occurrences":1,"predicate":"offset < 0 || offset + 4 > 32","rule_id":"SQC-OutOfBoundsAccess"},{"analysis_name":"01_basic_hazards","callstack":["sqc_main"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":15,"concrete_witness":"arith_result > INT32_MAX (2147483750)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"sqc_main","kind":3,"kind_str":"Signed Integer Overflow","line":55,"message":"Signed integer overflow in arithmetic operation (arith_result > INT32_MAX (2147483750))","occurrences":1,"predicate":"result < INT32_MIN || result > INT32_MAX","rule_id":"SQC-SignedIntegerOverflow"}],"analyses":[{"alarms_count":6,"elapsed_ms":75.969814,"equivalence_cache_hits":0,"equivalence_queries":3,"error_message":"","instructions_analyzed":51,"remainder_slices":0,"smt_false_positives_eliminated":0,"smt_queries":2,"success":true,"unit_id":1,"unit_name":"01_basic_hazards"}],"cache_hit_pct":0,"definite_bugs":6,"files":[{"file_name":"basic_hazards.c","file_path":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","functions":[{"alarms_count":0,"cond_pct":100,"covered_lines":1,"end_line":18,"executable_lines":1,"fully_covered_sub_conditions":0,"function_name":"helper_b","loc_pct":100,"start_line":16,"total_sub_conditions":0,"was_called":true},{"alarms_count":4,"cond_pct":100,"covered_lines":7,"end_line":36,"executable_lines":7,"fully_covered_sub_conditions":1,"function_name":"compute","loc_pct":100,"start_line":21,"total_sub_conditions":1,"was_called":true},{"alarms_count":1,"cond_pct":100,"covered_lines":2,"end_line":42,"executable_lines":2,"fully_covered_sub_conditions":0,"function_name":"array_access","loc_pct":100,"start_line":39,"total_sub_conditions":0,"was_called":true},{"alarms_count":1,"cond_pct":100,"covered_lines":7,"end_line":55,"executable_lines":7,"fully_covered_sub_conditions":0,"function_name":"sqc_main","loc_pct":100,"start_line":45,"total_sub_conditions":0,"was_called":true}],"line_alarms":{"22":[{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":13,"concrete_witness":"ptr = NULL","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":0,"kind_str":"Null Pointer Dereference","line":22,"message":"Null pointer dereference on read of 'ptr'","occurrences":2,"predicate":"ptr == NULL","rule_id":"SQC-NullPointerDeref"}],"23":[{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":15,"concrete_witness":"arith_result > INT32_MAX (2147483657)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":3,"kind_str":"Signed Integer Overflow","line":23,"message":"Signed integer overflow in arithmetic operation (arith_result > INT32_MAX (2147483657))","occurrences":2,"predicate":"result < INT32_MIN || result > INT32_MAX","rule_id":"SQC-SignedIntegerOverflow"}],"35":[{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":22,"concrete_witness":"arith_result < INT32_MIN (-2147483663)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":3,"kind_str":"Signed Integer Overflow","line":35,"message":"Signed integer overflow in arithmetic operation (arith_result < INT32_MIN (-2147483663))","occurrences":2,"predicate":"result < INT32_MIN || result > INT32_MAX","rule_id":"SQC-SignedIntegerOverflow"},{"analysis_name":"01_basic_hazards","callstack":["sqc_main","compute"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":17,"concrete_witness":"in_L46_55088 = 15 (divisor = 0)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"compute","kind":2,"kind_str":"Division By Zero","line":35,"message":"Division/modulo by zero (in_L46_55088 = 15 (divisor = 0))","occurrences":2,"predicate":"divisor == 0","rule_id":"SQC-DivisionByZero"}],"42":[{"analysis_name":"01_basic_hazards","callstack":["sqc_main","array_access"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":12,"concrete_witness":"ptr_offset = 32","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"array_access","kind":1,"kind_str":"Out-of-Bounds Memory Access","line":42,"message":"Out-of-bounds read on 'stack_96614536691424' (ptr_offset = 32)","occurrences":2,"predicate":"offset < 0 || offset + 4 > 32","rule_id":"SQC-OutOfBoundsAccess"}],"55":[{"analysis_name":"01_basic_hazards","callstack":["sqc_main"],"certainty":0,"certainty_str":"Definite Bug","col_end":0,"col_start":15,"concrete_witness":"arith_result > INT32_MAX (2147483750)","file":"/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c","function_name":"sqc_main","kind":3,"kind_str":"Signed Integer Overflow","line":55,"message":"Signed integer overflow in arithmetic operation (arith_result > INT32_MAX (2147483750))","occurrences":2,"predicate":"result < INT32_MIN || result > INT32_MAX","rule_id":"SQC-SignedIntegerOverflow"}]},"line_statuses":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,4,4,0,2,0,2,0,0,0,0,2,0,0,4,2,0,0,0,2,0,4,0,0,0,2,2,2,0,2,0,2,2,0,4,0],"line_sub_conditions":{"25":[{"col_end":16,"col_start":9,"expr":"mode > 0","fully_covered":true,"note":"Both True & False covered","seen_false":true,"seen_true":true}]},"loc_pct":100,"source_lines":["/**"," * @file basic_hazards.c"," * @brief Example 01: Hazard-Guided Symbolic Partitioning"," *"," * Demonstrates how `sqc` detects 4 classic C undefined behaviors in a single pass"," * without brute-force enumeration:"," *   1. Null Pointer Dereference (`a == NULL`)"," *   2. Signed Integer Overflow (`x + 10` when `x > INT_MAX - 10`)"," *   3. Division By Zero (`100 / (y - 25)` when `*a == 15`)"," *   4. Out-of-Bounds Array Access (`table[idx]` when `idx < 0 || idx >= 8`)"," */","#include <sqc_builtin.h>","#include <limits.h>","#include <stddef.h>","","static int helper_b(int mode) {","    /* Pure helper whose input depends only on `mode`, independent of `a`, `x`, `y` */","    return mode * 2 + 1;","}","","int compute(int *a, int mode) {","    int x = *a;                  /* Hazard 1: Null Pointer Dereference (a == NULL) */","    int y = x + 10;              /* Hazard 2: Signed Integer Overflow (x > INT_MAX - 10) */","","    if (mode > 0) {","        mode = 1;","    } else {","        mode = 1;","    }","","    /* Join point: both branches yield mode == 1; helper_b(1) analyzed once */","    int z = helper_b(mode);","","    /* Hazard 3: Division By Zero when y - 25 == 0 (i.e. *a == 15) */","    int q = 100 / (y - 25);","    return q + z;","}","","int array_access(int idx) {","    int table[8] = {10, 20, 30, 40, 50, 60, 70, 80};","    /* Hazard 4: Out-of-Bounds Memory Access when idx < 0 or idx >= 8 */","    return table[idx];","}","","int sqc_main(void) {","    int val = sqc_interval(INT_MIN, INT_MAX);","    int *ptr = (int *)sqc_nondet_ptr(&val, NULL);","    int mode = sqc_interval(-10, 10);","","    int r1 = compute(ptr, mode);","","    int idx = sqc_interval(-2, 12);","    int r2 = array_access(idx);","","    return r1 + r2;","}"],"total_alarms":6,"total_covered_lines":17,"total_executable_lines":17,"total_lines":56}],"overall_loc_pct":100,"potential_ubs":0,"project_name":"01_basic_hazards","succeeded_analyses":1,"timestamp":"2026-11-24 16:07:45","total_alarms":6,"total_analyses":1,"total_covered_lines":17,"total_elapsed_ms":75.969814,"total_equiv_hits":0,"total_equiv_queries":3,"total_exec_lines":17,"total_instructions":51,"total_remainder_slices":0,"total_smt_fp_eliminated":0,"total_smt_queries":2}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('sqc-data').textContent);
+
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function fmtPct(v) { return Number(v || 0).toFixed(1) + '%'; }
+function barClass(p) { return p >= 80 ? '' : (p >= 50 ? 'warn' : 'low'); }
+function shortPath(p) {
+  if (!p) return '<unknown>';
+  const parts = p.split('/');
+  return parts.length > 2 ? '…/' + parts.slice(-2).join('/') : p;
+}
+
+// Header & KPIs
+document.getElementById('hdr-project').textContent = DATA.project_name;
+document.getElementById('hdr-timestamp').textContent = 'Generated: ' + DATA.timestamp;
+document.getElementById('tab-alarms-cnt').textContent = DATA.total_alarms;
+document.getElementById('tab-files-cnt').textContent = DATA.files.length;
+document.getElementById('tab-units-cnt').textContent = DATA.analyses.length;
+
+document.getElementById('kpi-grid').innerHTML = `
+  <div class="kpi">
+    <div class="kpi-label">Analyses Run</div>
+    <div class="kpi-value">${DATA.total_analyses}</div>
+    <div class="kpi-sub">${DATA.succeeded_analyses} succeeded &middot; ${DATA.total_elapsed_ms.toFixed(1)} ms total</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Consolidated Alarms</div>
+    <div class="kpi-value" style="color:${DATA.total_alarms ? '#f97316' : '#22c55e'}">${DATA.total_alarms}</div>
+    <div class="kpi-sub">${DATA.definite_bugs} Definite Bugs &middot; ${DATA.potential_ubs} Potential UBs</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Overall Project LoC Coverage</div>
+    <div class="kpi-value">${fmtPct(DATA.overall_loc_pct)}</div>
+    <div class="progress-bar"><div class="progress-fill ${barClass(DATA.overall_loc_pct)}" style="width:${Math.min(100, DATA.overall_loc_pct)}%"></div></div>
+    <div class="kpi-sub">${DATA.total_covered_lines} / ${DATA.total_exec_lines} executable lines</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Graph Equiv Cache Hit Rate</div>
+    <div class="kpi-value">${fmtPct(DATA.cache_hit_pct)}</div>
+    <div class="kpi-sub">${DATA.total_equiv_hits} hits / ${DATA.total_equiv_queries} queries &middot; ${DATA.total_remainder_slices} slices</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">SMT (Z3) Refiner</div>
+    <div class="kpi-value">${DATA.total_smt_queries}</div>
+    <div class="kpi-sub">${DATA.total_smt_fp_eliminated} false positives eliminated</div>
+  </div>
+`;
+
+// Tabs
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
+}
+document.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
+
+// Map file_path -> file object
+const FILE_MAP = new Map();
+DATA.files.forEach((f, idx) => FILE_MAP.set(f.file_path, { file: f, idx }));
+
+// Populate alarm filters
+const kindSet = new Set(DATA.alarms.map(a => a.kind_str));
+const unitSet = new Set(DATA.alarms.map(a => a.analysis_name).filter(Boolean));
+const kindSel = document.getElementById('alarm-kind-filter');
+kindSet.forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = k; kindSel.appendChild(o); });
+const unitSel = document.getElementById('alarm-unit-filter');
+unitSet.forEach(u => { const o = document.createElement('option'); o.value = u; o.textContent = u; unitSel.appendChild(o); });
+
+let expandedAlarmIdx = -1;
+function renderAlarms() {
+  const q = document.getElementById('alarm-search').value.toLowerCase();
+  const kf = kindSel.value;
+  const cf = document.getElementById('alarm-cert-filter').value;
+  const uf = unitSel.value;
+  const tbody = document.getElementById('alarms-tbody');
+  tbody.innerHTML = '';
+
+  const filtered = DATA.alarms.map((a, i) => ({ a, i })).filter(({ a }) => {
+    if (kf && a.kind_str !== kf) return false;
+    if (cf && a.certainty_str !== cf) return false;
+    if (uf && a.analysis_name !== uf) return false;
+    if (q) {
+      const hay = [a.kind_str, a.function_name, a.file, a.predicate, a.concrete_witness, a.message, a.analysis_name].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="8" class="muted" style="text-align:center;padding:24px;">No alarms match the current filter.</td></tr>';
+    return;
+  }
+
+  filtered.forEach(({ a, i }) => {
+    const tr = document.createElement('tr');
+    tr.className = 'clickable';
+    const certCls = a.certainty_str === 'Definite Bug' ? 'pill-definite' : 'pill-potential';
+    const csShort = (a.callstack && a.callstack.length)
+      ? a.callstack.map(f => esc(f)).join(' &rarr; ')
+      : '<span class="muted">N/A</span>';
+    tr.innerHTML = `
+      <td><strong>${esc(a.kind_str)}</strong></td>
+      <td><span class="pill ${certCls}">${esc(a.certainty_str)}</span></td>
+      <td class="mono">${esc(a.function_name || '<global>')}</td>
+      <td class="mono" title="${esc(a.file)}">${esc(shortPath(a.file))}:${a.line}</td>
+      <td class="mono">${esc(a.predicate || '-')}</td>
+      <td class="mono">${esc(a.concrete_witness || '-')}</td>
+      <td class="mono" style="font-size:11.5px;">${csShort}</td>
+      <td>${esc(a.analysis_name || '-')}</td>
+    `;
+    tr.addEventListener('click', () => {
+      expandedAlarmIdx = (expandedAlarmIdx === i) ? -1 : i;
+      renderAlarms();
+    });
+    tbody.appendChild(tr);
+
+    if (expandedAlarmIdx === i) {
+      const dtr = document.createElement('tr');
+      dtr.className = 'alarm-detail-row';
+      const entry = FILE_MAP.get(a.file);
+      let snippetHtml = '<div class="muted" style="padding:10px;">Source lines unavailable.</div>';
+      if (entry && entry.file.source_lines.length > 0 && a.line > 0) {
+        const start = Math.max(1, a.line - 3);
+        const end = Math.min(entry.file.source_lines.length, a.line + 3);
+        let linesHtml = '';
+        for (let ln = start; ln <= end; ++ln) {
+          linesHtml += `<div class="snip-line ${ln === a.line ? 'hl' : ''}"><span class="snip-ln">${ln}</span><span>${esc(entry.file.source_lines[ln - 1])}</span></div>`;
+        }
+        snippetHtml = `<div class="code-snippet">${linesHtml}</div>`;
+      }
+      const csSteps = (a.callstack && a.callstack.length)
+        ? a.callstack.map((f, idx) => `<div class="callstack-step">${idx === 0 ? '&#9656;' : '&nbsp;&nbsp;&#8627;'} ${esc(f)}()</div>`).join('')
+        : '<div class="muted">N/A</div>';
+      dtr.innerHTML = `
+        <td colspan="8">
+          <div class="alarm-detail-box">
+            <div>
+              <div><strong>Message:</strong> ${esc(a.message || a.kind_str)}</div>
+              <div style="margin-top:6px;"><strong>Predicate:</strong> <span class="mono">${esc(a.predicate || 'N/A')}</span></div>
+              <div style="margin-top:6px;"><strong>Concrete Witness:</strong> <span class="mono">${esc(a.concrete_witness || 'N/A')}</span></div>
+              <div class="callstack-box">
+                <strong>Callstack:</strong>
+                ${csSteps}
+              </div>
+              <div style="margin-top:10px;">
+                ${entry ? `<button class="btn" onclick="jumpToSource(${entry.idx}, ${a.line})">Open in Source Viewer &rarr;</button>` : ''}
+              </div>
+            </div>
+            <div>${snippetHtml}</div>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(dtr);
+    }
+  });
+}
+['alarm-search', 'alarm-kind-filter', 'alarm-cert-filter', 'alarm-unit-filter'].forEach(id => {
+  document.getElementById(id).addEventListener('input', renderAlarms);
+  document.getElementById(id).addEventListener('change', renderAlarms);
+});
+renderAlarms();
+
+// Tab 2: Coverage Table + Source Viewer
+const expandedFiles = new Set(DATA.files.map((_, idx) => idx));
+function renderCoverageTable() {
+  const tbody = document.getElementById('cov-tbody');
+  tbody.innerHTML = '';
+  if (DATA.files.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="7" class="muted" style="text-align:center;padding:24px;">No coverage data recorded.</td></tr>';
+    return;
+  }
+  DATA.files.forEach((f, idx) => {
+    const isExp = expandedFiles.has(idx);
+    const tr = document.createElement('tr');
+    tr.className = 'clickable';
+    tr.innerHTML = `
+      <td>
+        <span style="display:inline-block;width:16px;color:var(--accent);" onclick="event.stopPropagation();toggleFile(${idx})">${isExp ? '&#9662;' : '&#9656;'}</span>
+        <strong class="mono" title="${esc(f.file_path)}">${esc(f.file_name)}</strong>
+        <span class="muted" style="font-size:11px;margin-left:6px;">${esc(f.file_path)}</span>
+      </td>
+      <td>${f.total_lines}</td>
+      <td>${f.total_executable_lines}</td>
+      <td>${f.total_covered_lines}</td>
+      <td>
+        <div class="mini-bar">
+          <div class="mini-bar-track"><div class="mini-bar-fill ${barClass(f.loc_pct)}" style="width:${Math.min(100, f.loc_pct)}%"></div></div>
+          <span class="mono">${fmtPct(f.loc_pct)}</span>
+        </div>
+      </td>
+      <td class="muted">&mdash;</td>
+      <td>${f.total_alarms ? `<span class="pill pill-definite">${f.total_alarms}</span>` : '<span class="muted">0</span>'}</td>
+    `;
+    tr.addEventListener('click', () => jumpToSource(idx, 1));
+    tbody.appendChild(tr);
+
+    if (isExp) {
+      f.functions.forEach(fn => {
+        const ftr = document.createElement('tr');
+        ftr.className = 'fn-row clickable';
+        ftr.innerHTML = `
+          <td class="mono">
+            &#8627; ${esc(fn.function_name)}()
+            ${fn.was_called ? '' : '<span class="pill" style="background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;margin-left:6px;">Not Called</span>'}
+          </td>
+          <td class="muted">L${fn.start_line}&ndash;${fn.end_line}</td>
+          <td>${fn.executable_lines}</td>
+          <td>${fn.covered_lines}</td>
+          <td>
+            <div class="mini-bar">
+              <div class="mini-bar-track"><div class="mini-bar-fill ${barClass(fn.loc_pct)}" style="width:${Math.min(100, fn.loc_pct)}%"></div></div>
+              <span class="mono">${fmtPct(fn.loc_pct)}</span>
+            </div>
+          </td>
+          <td class="mono">${fn.total_sub_conditions ? `${fmtPct(fn.cond_pct)} (${fn.fully_covered_sub_conditions}/${fn.total_sub_conditions})` : '<span class="muted">N/A</span>'}</td>
+          <td>${fn.alarms_count ? `<span class="pill pill-definite">${fn.alarms_count}</span>` : '<span class="muted">0</span>'}</td>
+        `;
+        ftr.addEventListener('click', () => jumpToSource(idx, fn.start_line));
+        tbody.appendChild(ftr);
+      });
+    }
+  });
+}
+
+function toggleFile(idx) {
+  if (expandedFiles.has(idx)) expandedFiles.delete(idx);
+  else expandedFiles.add(idx);
+  renderCoverageTable();
+}
+
+const fileSel = document.getElementById('viewer-file-select');
+const funcSel = document.getElementById('viewer-func-select');
+DATA.files.forEach((f, idx) => {
+  const o = document.createElement('option');
+  o.value = String(idx);
+  o.textContent = `${f.file_name} (${fmtPct(f.loc_pct)})`;
+  fileSel.appendChild(o);
+});
+fileSel.addEventListener('change', () => openSourceViewer(Number(fileSel.value), 1));
+funcSel.addEventListener('change', () => {
+  const ln = Number(funcSel.value);
+  if (ln > 0) {
+    const el = document.getElementById('src-ln-' + ln);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('flash');
+      setTimeout(() => el.classList.remove('flash'), 1800);
+    }
+  }
+});
+
+function openSourceViewer(fileIdx, targetLine) {
+  const f = DATA.files[fileIdx];
+  if (!f) return;
+  fileSel.value = String(fileIdx);
+  funcSel.innerHTML = '<option value="0">-- Jump to Function --</option>';
+  f.functions.forEach(fn => {
+    const o = document.createElement('option');
+    o.value = String(fn.start_line);
+    o.textContent = `${fn.function_name}() — L${fn.start_line} (${fmtPct(fn.loc_pct)})`;
+    funcSel.appendChild(o);
+  });
+
+  document.getElementById('viewer-title').textContent = f.file_path;
+  document.getElementById('viewer-stats').textContent =
+    `${f.total_covered_lines}/${f.total_executable_lines} executable lines (${fmtPct(f.loc_pct)}) · ${f.total_alarms} alarms`;
+
+  const container = document.getElementById('source-container');
+  let html = '';
+  for (let i = 0; i < f.total_lines; ++i) {
+    const ln = i + 1;
+    const st = f.line_statuses[i] || 0;
+    const code = f.source_lines[i] || '';
+    const subconds = f.line_sub_conditions[String(ln)] || [];
+    const alarms = f.line_alarms[String(ln)] || [];
+
+    let badgesHtml = '';
+    if (subconds.length > 0) {
+      badgesHtml = '<span class="sc-badges">' + subconds.map(sc => {
+        const cls = sc.fully_covered ? 'full' : 'partial';
+        return `<span class="sc-badge ${cls}">[${esc(sc.expr)}: ${esc(sc.note)}]</span>`;
+      }).join('') + '</span>';
+    }
+
+    html += `<div class="src-line st-${st}" id="src-ln-${ln}"><span class="ln-num">${ln}</span><span class="ln-code">${esc(code)}${badgesHtml}</span></div>`;
+
+    if (alarms.length > 0) {
+      alarms.forEach(al => {
+        const csInline = (al.callstack && al.callstack.length) ? al.callstack.map(c => esc(c) + '()').join(' &rarr; ') : 'N/A';
+        html += `<div class="inline-alarm-card">
+          <strong>&#9888; ${esc(al.kind_str)} (${esc(al.certainty_str)})</strong> &mdash; ${esc(al.message || '')}<br>
+          <span class="muted">Predicate:</span> <span class="mono">${esc(al.predicate || 'N/A')}</span> &nbsp;|&nbsp;
+          <span class="muted">Concrete Witness:</span> <span class="mono">${esc(al.concrete_witness || 'N/A')}</span><br>
+          <span class="muted">Callstack:</span> <span class="mono">${csInline}</span>
+        </div>`;
+      });
+    }
+  }
+  container.innerHTML = html;
+
+  if (targetLine > 0) {
+    const el = document.getElementById('src-ln-' + targetLine);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('flash');
+      setTimeout(() => el.classList.remove('flash'), 1800);
+    }
+  }
+}
+
+function jumpToSource(fileIdx, line) {
+  switchTab('source');
+  openSourceViewer(fileIdx, line);
+}
+window.jumpToSource = jumpToSource;
+window.toggleFile = toggleFile;
+window.switchTab = switchTab;
+
+renderCoverageTable();
+if (DATA.files.length > 0) openSourceViewer(0, 1);
+
+// Tab 3: Individual Analyses
+const atbody = document.getElementById('analyses-tbody');
+DATA.analyses.forEach(u => {
+  const hitPct = u.equivalence_queries ? (100 * u.equivalence_cache_hits / u.equivalence_queries).toFixed(1) + '%' : '0.0%';
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td class="mono">${u.unit_id}</td>
+    <td><strong>${esc(u.unit_name)}</strong>${u.error_message ? `<div class="muted" style="font-size:11px;color:#fca5a5;">${esc(u.error_message)}</div>` : ''}</td>
+    <td><span class="pill ${u.success ? 'pill-ok' : 'pill-fail'}">${u.success ? 'OK' : 'Failed'}</span></td>
+    <td class="mono">${Number(u.elapsed_ms).toFixed(2)}</td>
+    <td class="mono">${u.instructions_analyzed}</td>
+    <td class="mono">${u.equivalence_queries}</td>
+    <td class="mono">${u.equivalence_cache_hits} (${hitPct})</td>
+    <td class="mono">${u.remainder_slices}</td>
+    <td class="mono">${u.smt_queries}</td>
+    <td class="mono">${u.smt_false_positives_eliminated}</td>
+    <td>${u.alarms_count ? `<span class="pill pill-definite">${u.alarms_count}</span>` : '0'}</td>
+  `;
+  atbody.appendChild(tr);
+});
+</script>
+</body>
+</html>

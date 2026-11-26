@@ -1,0 +1,248 @@
+{
+  "alarms": [
+    {
+      "analysis_name": "01_basic_hazards",
+      "callstack": [
+        "sqc_main",
+        "compute"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 13,
+      "concrete_witness": "ptr = NULL",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "compute",
+      "kind": 0,
+      "kind_str": "Null Pointer Dereference",
+      "line": 22,
+      "message": "Null pointer dereference on read of 'ptr'",
+      "occurrences": 1,
+      "predicate": "ptr == NULL",
+      "rule_id": "SQC-NullPointerDeref"
+    },
+    {
+      "analysis_name": "01_basic_hazards",
+      "callstack": [
+        "sqc_main",
+        "compute"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 15,
+      "concrete_witness": "arith_result > INT32_MAX (2147483657)",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "compute",
+      "kind": 3,
+      "kind_str": "Signed Integer Overflow",
+      "line": 23,
+      "message": "Signed integer overflow in arithmetic operation (arith_result > INT32_MAX (2147483657))",
+      "occurrences": 1,
+      "predicate": "result < INT32_MIN || result > INT32_MAX",
+      "rule_id": "SQC-SignedIntegerOverflow"
+    },
+    {
+      "analysis_name": "01_basic_hazards",
+      "callstack": [
+        "sqc_main",
+        "compute"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 22,
+      "concrete_witness": "arith_result < INT32_MIN (-2147483663)",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "compute",
+      "kind": 3,
+      "kind_str": "Signed Integer Overflow",
+      "line": 35,
+      "message": "Signed integer overflow in arithmetic operation (arith_result < INT32_MIN (-2147483663))",
+      "occurrences": 1,
+      "predicate": "result < INT32_MIN || result > INT32_MAX",
+      "rule_id": "SQC-SignedIntegerOverflow"
+    },
+    {
+      "analysis_name": "01_basic_hazards",
+      "callstack": [
+        "sqc_main",
+        "compute"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 17,
+      "concrete_witness": "in_L46_22864 = 15 (divisor = 0)",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "compute",
+      "kind": 2,
+      "kind_str": "Division By Zero",
+      "line": 35,
+      "message": "Division/modulo by zero (in_L46_22864 = 15 (divisor = 0))",
+      "occurrences": 1,
+      "predicate": "divisor == 0",
+      "rule_id": "SQC-DivisionByZero"
+    },
+    {
+      "analysis_name": "01_basic_hazards",
+      "callstack": [
+        "sqc_main",
+        "array_access"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 12,
+      "concrete_witness": "ptr_offset = 32",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "array_access",
+      "kind": 1,
+      "kind_str": "Out-of-Bounds Memory Access",
+      "line": 42,
+      "message": "Out-of-bounds read on 'stack_109506770436032' (ptr_offset = 32)",
+      "occurrences": 1,
+      "predicate": "offset < 0 || offset + 4 > 32",
+      "rule_id": "SQC-OutOfBoundsAccess"
+    },
+    {
+      "analysis_name": "01_basic_hazards",
+      "callstack": [
+        "sqc_main"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 15,
+      "concrete_witness": "arith_result > INT32_MAX (2147483750)",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "sqc_main",
+      "kind": 3,
+      "kind_str": "Signed Integer Overflow",
+      "line": 55,
+      "message": "Signed integer overflow in arithmetic operation (arith_result > INT32_MAX (2147483750))",
+      "occurrences": 1,
+      "predicate": "result < INT32_MIN || result > INT32_MAX",
+      "rule_id": "SQC-SignedIntegerOverflow"
+    }
+  ],
+  "covered_lines": [
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      18
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      22
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      23
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      25
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      27
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      32
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      35
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      36
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      40
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      42
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      46
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      47
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      48
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      50
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      52
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      53
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      55
+    ]
+  ],
+  "dead_after_ub_lines": [],
+  "elapsed_ms": 79.021929999999998,
+  "equivalence_cache_hits": 0,
+  "equivalence_queries": 3,
+  "error_message": "",
+  "input_specs": [
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 46,
+      "range_desc": "[-2147483648, 2147483647]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 47,
+      "range_desc": "{&stack_109506770664912, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 48,
+      "range_desc": "[-10, 10]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 52,
+      "range_desc": "[-2, 12]",
+      "target": "interval_val"
+    }
+  ],
+  "instructions_analyzed": 51,
+  "remainder_slices": 0,
+  "smt_false_positives_eliminated": 0,
+  "smt_queries": 2,
+  "subcond_masks": {
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/01_basic_hazards/basic_hazards.c:25:9": 3
+  },
+  "success": true,
+  "unit_id": 1,
+  "unit_name": "01_basic_hazards"
+}

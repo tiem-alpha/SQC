@@ -1,0 +1,181 @@
+{
+  "alarms": [
+    {
+      "analysis_name": "02_graph_equivalence",
+      "callstack": [
+        "sqc_main",
+        "validate_and_process"
+      ],
+      "certainty": 0,
+      "certainty_str": "Definite Bug",
+      "col_end": 0,
+      "col_start": 29,
+      "concrete_witness": "in_L56_6848 = -5 (divisor = 0)",
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      "function_name": "validate_and_process",
+      "kind": 2,
+      "kind_str": "Division By Zero",
+      "line": 32,
+      "message": "Division/modulo by zero (in_L56_6848 = -5 (divisor = 0))",
+      "occurrences": 1,
+      "predicate": "divisor == 0",
+      "rule_id": "SQC-DivisionByZero"
+    }
+  ],
+  "covered_lines": [
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      17
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      18
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      21
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      24
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      26
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      28
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      29
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      32
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      33
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      35
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      38
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      40
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      41
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      48
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      49
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      52
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      53
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      56
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      57
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      60
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      61
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      62
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      63
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      65
+    ]
+  ],
+  "dead_after_ub_lines": [],
+  "elapsed_ms": 36.194490000000002,
+  "equivalence_cache_hits": 4,
+  "equivalence_queries": 11,
+  "error_message": "",
+  "input_specs": [
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 48,
+      "range_desc": "[10, 50]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 52,
+      "range_desc": "[100, 500]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 56,
+      "range_desc": "[-20, 300]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 60,
+      "range_desc": "[0, 100]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 61,
+      "range_desc": "[200, 400]",
+      "target": "interval_val"
+    }
+  ],
+  "instructions_analyzed": 99,
+  "remainder_slices": 2,
+  "smt_false_positives_eliminated": 0,
+  "smt_queries": 1,
+  "subcond_masks": {
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c:17:9": 1,
+    "/home/nguyentiem/Project/Code_quality/sqc/examples/02_graph_equivalence/graph_equiv.c:26:9": 3
+  },
+  "success": true,
+  "unit_id": 1,
+  "unit_name": "02_graph_equivalence"
+}

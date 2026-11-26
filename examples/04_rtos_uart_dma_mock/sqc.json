@@ -1,0 +1,17 @@
+{
+  "common": {
+    "prefix_path": ".",
+    "machdep": "gcc_x86_64"
+  },
+  "analyses": [
+    {
+      "name": "04_rtos_uart_dma_mock",
+      "main": "sqc_main",
+      "files": [
+        "rtos_dma_app.c",
+        "sqc_driver.c"
+      ],
+      "cpp-extra-args": []
+    }
+  ]
+}

@@ -1,0 +1,1655 @@
+{
+  "alarms": [],
+  "covered_lines": [
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      32
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      38
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      51
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      53
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      56
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      58
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      61
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      67
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      68
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      236
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      237
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      244
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      245
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      251
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      252
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      258
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c",
+      259
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      376
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      377
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      379
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      380
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      383
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      385
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      434
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c",
+      440
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      112
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      113
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      115
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      116
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      119
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      121
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      127
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      128
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      129
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      130
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      134
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      136
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      137
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      138
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      139
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      140
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      143
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      146
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      150
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      157
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      160
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      164
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      166
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      174
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      198
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      200
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      208
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      220
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      224
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      226
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      233
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      239
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      245
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      251
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      257
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      262
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      264
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      269
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      274
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      298
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      316
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      317
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      318
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      344
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      404
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      405
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      406
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      407
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      416
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      417
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      418
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      419
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      420
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      421
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      432
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      433
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      434
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      443
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      445
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      447
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      448
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      449
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      450
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      463
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      464
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      476
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      478
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      483
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      494
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      496
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      497
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      500
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      501
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      504
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      505
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      509
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      510
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      512
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      516
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      518
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      522
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      524
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      528
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      530
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      533
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      535
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      544
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      549
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      560
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      562
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      563
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      564
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      598
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      600
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      601
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      602
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      612
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      614
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      615
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      618
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      620
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      667
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      669
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      670
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      671
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      672
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      691
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      692
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      694
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      696
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c",
+      697
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_log.c",
+      65
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_log.c",
+      72
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_os.c",
+      46
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_os.c",
+      67
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_os.c",
+      109
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c",
+      246
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c",
+      247
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c",
+      249
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c",
+      250
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c",
+      253
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c",
+      255
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      83
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      84
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      88
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      91
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      92
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      95
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      96
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      98
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      108
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      110
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      113
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      116
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      119
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      125
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      131
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      134
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      136
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      137
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      139
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      141
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      142
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      144
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      146
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      147
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      149
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      186
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      187
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      188
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      189
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      190
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      191
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      192
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      194
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      196
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      197
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      202
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      208
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      209
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      210
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      211
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      212
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      213
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      214
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      216
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      218
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      219
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      224
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      260
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      263
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      282
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      283
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      299
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      305
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c",
+      306
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      74
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      75
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      76
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      78
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      116
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      122
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c",
+      124
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_driver_interface.c",
+      22
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_driver_interface.c",
+      38
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      378
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      380
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      382
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      387
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      388
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      389
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      390
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      392
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      416
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      417
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      425
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      440
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      441
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      442
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      443
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      444
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      451
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      452
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      453
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      460
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      461
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      462
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      527
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      537
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      672
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      675
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      679
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      682
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      688
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      691
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      694
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      698
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      701
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      707
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      710
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      716
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      719
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      722
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      725
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      815
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      816
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      828
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      829
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      830
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      832
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      833
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      834
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      836
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      837
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      838
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      840
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      843
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      845
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      847
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      849
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      851
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1146
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1147
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1185
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1305
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1310
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1313
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1314
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1317
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1318
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1319
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1320
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1322
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1324
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1325
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1327
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1328
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1330
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1331
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1333
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1334
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1336
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1337
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1340
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1341
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1342
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1343
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1344
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1345
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1346
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1348
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1349
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1350
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1353
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1355
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1356
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1357
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1362
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1371
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1548
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1549
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1550
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1551
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1552
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1554
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1558
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1559
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1560
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1562
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1564
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1568
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1570
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1574
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1576
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1637
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1639
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1640
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1642
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1644
+    ],
+    [
+      "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      1645
+    ]
+  ],
+  "dead_after_ub_lines": [],
+  "elapsed_ms": 1154.081336,
+  "equivalence_cache_hits": 253,
+  "equivalence_queries": 280,
+  "error_message": "",
+  "input_specs": [
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_msg_create",
+      "kind": "sqc_nondet",
+      "line": 416,
+      "range_desc": "[-2147483648, 2147483647]",
+      "target": "nondet_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_msg_create",
+      "kind": "sqc_nondet_ptr",
+      "line": 417,
+      "range_desc": "{&task_queue, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_timer_create",
+      "kind": "sqc_interval",
+      "line": 378,
+      "range_desc": "[0, 5]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1314,
+      "range_desc": "[0, 3]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1317,
+      "range_desc": "{cell_modem_event_handler(), NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1318,
+      "range_desc": "{cell_get_event_handler(), NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1319,
+      "range_desc": "{cell_test_event_handler(), NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1320,
+      "range_desc": "{cell_dfota_handler(), NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1322,
+      "range_desc": "{cell_context_event_handler(), NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_find_variable",
+      "line": 1324,
+      "range_desc": "white-box state target 'g_current_context_idx'",
+      "target": "g_current_context_idx"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1327,
+      "range_desc": "[0, 7]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_find_variable",
+      "line": 1330,
+      "range_desc": "white-box state target 'g_status'",
+      "target": "g_status"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1333,
+      "range_desc": "[0, 10]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1336,
+      "range_desc": "{&context_settings, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1337,
+      "range_desc": "{&cellular_context, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1340,
+      "range_desc": "[0, 4]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1341,
+      "range_desc": "[0, 2000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1342,
+      "range_desc": "[1, 100000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1344,
+      "range_desc": "[0, 2000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1345,
+      "range_desc": "[1, 1024]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_make_unknown",
+      "line": 1348,
+      "range_desc": "unknown bytes ([80] B, may lack '\\0')",
+      "target": "socket_settings"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_nondet_ptr",
+      "line": 1349,
+      "range_desc": "{cell_socket_event_handler(), NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1350,
+      "range_desc": "[0, 4]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_make_unknown",
+      "line": 1353,
+      "range_desc": "unknown bytes ([16] B, may lack '\\0')",
+      "target": "socket_data_info"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_make_unknown",
+      "line": 1355,
+      "range_desc": "unknown bytes ([88] B, may lack '\\0')",
+      "target": "test_request"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1362,
+      "range_desc": "[18, 21]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1548,
+      "range_desc": "[0, 4]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1549,
+      "range_desc": "[0, 2000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1550,
+      "range_desc": "[1, 100000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1558,
+      "range_desc": "[0, 2000]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "sqc_main",
+      "kind": "sqc_interval",
+      "line": 1559,
+      "range_desc": "[990, 1023]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_msg_read",
+      "kind": "sqc_interval",
+      "line": 527,
+      "range_desc": "[12, 17]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_msg_read",
+      "kind": "sqc_nondet_ptr",
+      "line": 675,
+      "range_desc": "{&dfota_settings, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_msg_read",
+      "kind": "sqc_nondet_ptr",
+      "line": 694,
+      "range_desc": "{&data_block, NULL}",
+      "target": "ptr_choice"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "cell_os_msg_read",
+      "kind": "sqc_interval",
+      "line": 722,
+      "range_desc": "[-2147483648, 2147483647]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "specific_dfota_wireless_init",
+      "kind": "sqc_interval",
+      "line": 1146,
+      "range_desc": "[0, 2147483647]",
+      "target": "interval_val"
+    },
+    {
+      "file": "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c",
+      "function_name": "specific_dfota_wireless_init",
+      "kind": "sqc_interval",
+      "line": 1147,
+      "range_desc": "[1, 5]",
+      "target": "interval_val"
+    }
+  ],
+  "instructions_analyzed": 5657,
+  "remainder_slices": 0,
+  "smt_false_positives_eliminated": 0,
+  "smt_queries": 0,
+  "subcond_masks": {
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c:51:36": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c:51:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_api.c:56:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_connect.c:377:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:113:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:134:17": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:134:41": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:150:17": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:150:41": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:174:45": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:208:42": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:443:9": 1,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:445:13": 1,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:544:9": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:560:26": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:560:9": 1,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:598:9": 1,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:612:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:691:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_dfota.c:692:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_log.c:65:9": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_socket.c:247:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:110:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:125:9": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:134:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:139:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:144:9": 3,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:194:9": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:216:9": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:299:9": 2,
+    "/home/nguyentiem/Project/Code_quality/cmcell/cellular/src/cell_task.c:91:13": 1,
+    "/home/nguyentiem/Project/Code_quality/cmcell/com/src/cell_com.c:116:9": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c:1305:9": 2,
+    "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c:1325:9": 1,
+    "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c:1331:9": 1,
+    "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c:1637:5": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c:380:9": 3,
+    "/home/nguyentiem/Project/Code_quality/sqc/benchmarks/cmcell_features/sqc_features.c:382:13": 2
+  },
+  "success": true,
+  "unit_id": 2,
+  "unit_name": "feature-dfota"
+}

@@ -1,0 +1,16 @@
+{
+  "common": {
+    "prefix_path": ".",
+    "machdep": "gcc_x86_64"
+  },
+  "analyses": [
+    {
+      "name": "03_subcondition_coverage",
+      "main": "sqc_main",
+      "files": [
+        "subcond_cov.c"
+      ],
+      "cpp-extra-args": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/intrinsics_gen.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/omp_gen.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/acc_gen.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/sqc_core.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/sqc.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/test_engine_unit.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/edit_cache.dir
+/home/nguyentiem/Project/Code_quality/sqc/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/config.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/config.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/config.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/config.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/frontend.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/frontend.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/frontend.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/frontend.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/intervals.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/intervals.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/intervals.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/intervals.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/state.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/state.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/state.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/state.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/equivalence.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/equivalence.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/equivalence.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/equivalence.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/summaries.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/summaries.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/summaries.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/summaries.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/smt.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/smt.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/smt.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/smt.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/coverage.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/coverage.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/coverage.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/coverage.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/analyzer.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/analyzer.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/analyzer.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/analyzer.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc_core.dir/src/report.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/report.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/report.cpp",
+  "output": "CMakeFiles/sqc_core.dir/src/report.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/sqc.dir/src/main.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/src/main.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/src/main.cpp",
+  "output": "CMakeFiles/sqc.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/nguyentiem/Project/Code_quality/sqc/build",
+  "command": "/usr/bin/c++ -I/home/nguyentiem/Project/Code_quality/sqc/include -I/usr/lib/llvm-18/include -O3 -DNDEBUG -std=gnu++20   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wno-unused-parameter -fno-rtti -o CMakeFiles/test_engine_unit.dir/tests/test_engine_unit.cpp.o -c /home/nguyentiem/Project/Code_quality/sqc/tests/test_engine_unit.cpp",
+  "file": "/home/nguyentiem/Project/Code_quality/sqc/tests/test_engine_unit.cpp",
+  "output": "CMakeFiles/test_engine_unit.dir/tests/test_engine_unit.cpp.o"
+}
+]
